@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Root Menu for UIC Post -->
+        <menuitem id="menu_uic_post_root"
+                  name="UIC Post"
+                  sequence="10"/>
+
+        <!-- Submenu for Operations -->
+        <menuitem id="menu_uic_post_operations"
+                  name="Operations"
+                  parent="menu_uic_post_root"
+                  sequence="10"/>
+
+        <!-- Action for ResBranch -->
+        <record model="ir.actions.act_window" id="action_res_branch">
+            <field name="name">Branches</field>
+            <field name="res_model">res.branch</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item for Branches under Operations -->
+        <menuitem id="menu_uic_post_branches"
+                  name="Branches"
+                  parent="menu_uic_post_operations"
+                  action="action_res_branch"
+                  sequence="10"/>
+
+        <!-- Action for ResPartner -->
+        <record model="ir.actions.act_window" id="action_res_partner">
+            <field name="name">Partners</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item for Partners under Operations -->
+        <menuitem id="menu_uic_post_partners"
+                  name="Partners"
+                  parent="menu_uic_post_operations"
+                  action="action_res_partner"
+                  sequence="20"/>
+
+        <!-- Action for ResUsers -->
+        <record model="ir.actions.act_window" id="action_res_users">
+            <field name="name">Users</field>
+            <field name="res_model">res.users</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item for Users under Operations -->
+        <menuitem id="menu_uic_post_users"
+                  name="Users"
+                  parent="menu_uic_post_operations"
+                  action="action_res_users"
+                  sequence="30"/>
+
+        <!-- Action for Sale Order Products -->
+        <record model="ir.actions.act_window" id="action_sale_order_product">
+            <field name="name">Sale Order Products</field>
+            <field name="res_model">sale.order.product</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item for Sale Order Products under Operations -->
+        <menuitem id="menu_uic_post_sale_order_products"
+                  name="Sale Order Products"
+                  parent="menu_uic_post_operations"
+                  action="action_sale_order_product"
+                  sequence="40"/>
+
+        <!-- Action for Stock Picking -->
+        <record model="ir.actions.act_window" id="action_stock_picking">
+            <field name="name">Stock Picking</field>
+            <field name="res_model">stock.picking</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item for Stock Picking under Operations -->
+        <menuitem id="menu_uic_post_stock_picking"
+                  name="Stock Picking"
+                  parent="menu_uic_post_operations"
+                  action="action_stock_picking"
+                  sequence="50"/>
+
+        <!-- Action for Sale Orders -->
+        <record model="ir.actions.act_window" id="action_sale_order">
+            <field name="name">Sale Orders</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item for Sale Orders under Operations -->
+        <menuitem id="menu_uic_post_sale_orders"
+                  name="Sale Orders"
+                  parent="menu_uic_post_operations"
+                  action="action_sale_order"
+                  sequence="60"/>
+    </data>
+</odoo>

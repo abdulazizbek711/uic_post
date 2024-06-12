@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_branch,res.branch,model_res_branch,group_branch_manager,1,1,1,1
+access_res_users,res.users,model_res_users,group_branch_manager,1,1,1,1
+access_res_partner,res.partner,model_res_partner,group_branch_manager,1,1,1,1
+access_sale_order,sale.order,model_sale_order,group_operator,1,1,1,1
+access_sale_order_product,sale.order.product,model_sale_order_product,group_operator,1,1,1,1
+access_stock_picking,stock.picking,model_stock_picking,group_skladchi,1,1,1,1
+access_stock_picking_dostavkachi,stock.picking,model_stock_picking,group_dostavkachi,1,0,0,0
+access_superadmin,sale.order,model_sale_order,group_superadmin,1,1,1,1
+access_superadmin_users,res.users,model_res_users,group_superadmin,1,1,1,1
+access_superadmin_branches,res.branch,model_res_branch,group_superadmin,1,1,1,1

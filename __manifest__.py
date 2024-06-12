@@ -1,0 +1,20 @@
+{
+    'name': 'Custom Postal Service',
+    'version': '1.0',
+    'depends': ['base', 'sale', 'stock', 'website'],
+    'data': [
+        'views/sale_order_view.xml',
+        'views/stock_picking_view.xml',
+        'views/res_branch.xml',
+        'views/res_users.xml',
+        'views/res_partner.xml',
+        'views/order_status.xml',
+        'views/promo_code_view.xml',
+        'views/menu.xml',
+        'security/security.xml',
+        'security/ir.model.access.csv',
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}

@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="group_branch_manager" model="res.groups">
+            <field name="name">Branch Manager</field>
+        </record>
+        <record id="group_operator" model="res.groups">
+            <field name="name">Operator</field>
+        </record>
+        <record id="group_skladchi" model="res.groups">
+            <field name="name">Skladchi</field>
+        </record>
+        <record id="group_dostavkachi" model="res.groups">
+            <field name="name">Dostavkachi</field>
+        </record>
+        <record id="group_superadmin" model="res.groups">
+            <field name="name">Superadmin</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- View for ResBranch -->
+        <record model="ir.ui.view" id="view_res_branch_form">
+            <field name="name">res.branch.form</field>
+            <field name="model">res.branch</field>
+            <field name="arch" type="xml">
+                <form string="Branch Form">
+                    <sheet>
+                        <group>
+                            <field name ="name"/>
+                            <field name="code"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action for ResBranch -->
+        <record model="ir.actions.act_window" id="action_res_branch">
+            <field name="name">Branch</field>
+            <field name="res_model">res.branch</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_res_branch_form"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="view_promo_code_form" model="ir.ui.view">
+            <field name="name">promo.code.form</field>
+            <field name="model">promo.code</field>
+            <field name="arch" type="xml">
+                <form string="Promo Code Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="discount"/>
+                            <field name="active"/>
+                            <field name="expiry_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_promo_code_tree" model="ir.ui.view">
+            <field name="name">promo.code.tree</field>
+            <field name="model">promo.code</field>
+            <field name="arch" type="xml">
+                <tree string="Promo Code List">
+                    <field name="name"/>
+                    <field name="discount"/>
+                    <field name="active"/>
+                    <field name="expiry_date"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

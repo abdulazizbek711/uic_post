@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="order_status_input_template" name="Order Status Input Template">
+        <div class="o_form_view">
+            <form action="/order-info" method="get">
+                <div class="form-group">
+                    <label for="order_id">Order ID</label>
+                    <input type="text" class="form-control" id="order_id" name="order_id" />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </template>
+
+<template id="order_status_template" name="Order Status Template">
+    <div class="o_form_view">
+        <h1>Order Status</h1>
+        <table class="table table-striped">
+            <tr>
+                <th>Sender Info</th>
+                <td>{{ order.sender_info }}</td>
+            </tr>
+            <tr>
+                <th>Recipient Info</th>
+                <td>{{ order.recipient_info }}</td>
+            </tr>
+            <tr>
+                <th>Sender Branch</th>
+                <td>{{ order.sender_branch.name }}</td>
+            </tr>
+            <tr>
+                <th>Recipient Branch</th>
+                <td>{{ order.recipient_branch.name }}</td>
+            </tr>
+            <tr>
+                <th>Shipping Cost</th>
+                <td>{{ order.shipping_cost }}</td>
+            </tr>
+            <tr>
+                <th>Total Amount</th>
+                <td>{{ order.total_amount }}</td>
+            </tr>
+        </table>
+        <h2>Product Info</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Product</th>
+                <th>Package Count</th>
+                <th>Weight</th>
+                <th>Volume</th>
+                <th>Fragile</th>
+            </tr>
+            <t t-foreach="order.product_info" t-as="product">
+                <tr>
+                    <td>{{ product.product_id.name }}</td>
+                    <td>{{ product.package_count }}</td>
+                    <td>{{ product.weight }}</td>
+                    <td>{{ product.volume }}</td>
+                    <td>{{ product.fragile }}</td>
+                </tr>
+            </t>
+        </table>
+    </div>
+</template>
+</odoo>

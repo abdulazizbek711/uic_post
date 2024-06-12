@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <form string="Sale Order Form">
+                    <sheet>
+                        <group>
+                            <field name="sender_info"/>
+                            <field name="recipient_info"/>
+                            <field name="sender_branch"/>
+                            <field name="recipient_branch"/>
+                            <field name="shipping_cost"/>
+                            <field name="total_amount"/>
+                            <field name="product_info"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
